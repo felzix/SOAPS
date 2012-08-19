@@ -1,0 +1,27 @@
+package com.enz.soaps.sqlite;
+
+import com.enz.soaps.PatientsTable;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class PatientsDatabaseHelper extends SQLiteOpenHelper {
+	
+	private static final String DATABASE_NAME = "patientstable.db";
+	private static final int DATABASE_VERSION = 1;
+	
+	public PatientsDatabaseHelper(Context context) {
+		super(context, DATABASE_NAME, null, DATABASE_VERSION);
+	}
+	
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		PatientsTable.onCreate(db);
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		PatientsTable.onUpgrade(db, oldVersion, newVersion);
+	}
+}

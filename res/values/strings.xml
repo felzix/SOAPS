@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">SOAPS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">SOAPS</string>
+    <string name="add_form">Create a new form.</string>
+    <string name="title_activity_new_form">New Form</string>
+    <string name="search_patients">Search Patients</string>
+    <string name="title_activity_view_patient">Patient</string>
+
+</resources>
