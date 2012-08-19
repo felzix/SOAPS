@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import java.util.List;
+import java.util.ArrayList;
 import android.database.Cursor;
 import com.enz.soaps.sqlite.Patient;
 
@@ -34,6 +35,7 @@ public class MainActivity extends Activity {
         };
         
         Cursor c = managedQuery(uri, projection, null, null, null);
+        patients = new ArrayList<Patient>();
         if (c != null ) {
             if  (c.moveToFirst()) {
                 do {
@@ -46,8 +48,8 @@ public class MainActivity extends Activity {
                 }while (c.moveToNext());
             }
         }
-        c.close();
         
+        c.close();
         lv = (ListView)findViewById(R.id.patients_list);
         ArrayAdapter<Patient> adapter = new ArrayAdapter<Patient>(this, android.R.layout.simple_list_item_1, patients);
         lv.setAdapter(adapter);
