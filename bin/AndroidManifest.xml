@@ -31,7 +31,7 @@
         </activity>
 
         <provider
-            android:name=".PatientsContentProvider"
+            android:name=".SOAPSContentProvider"
             android:authorities="com.enz.soaps.provider"
             android:enabled="true"
             android:exported="false" >

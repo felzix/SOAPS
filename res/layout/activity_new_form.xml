@@ -3,12 +3,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
+    <EditText
+        android:id="@+id/new_form_patient_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world"
-        tools:context=".NewFormActivity" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="qw" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/new_form_subjective"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/new_form_patient_name"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="er" />
+
+    <EditText
+        android:id="@+id/new_form_objective"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/new_form_subjective"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="ty" />
+
+    <EditText
+        android:id="@+id/new_form_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/new_form_objective"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="ui" />
+
+    <EditText
+        android:id="@+id/new_form_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/new_form_a"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="op" />
+
+    <EditText
+        android:id="@+id/new_form_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/new_form_p"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="as" />
+
+    <ImageButton
+        android:id="@+id/new_form_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/save_form"
+        android:onClick="saveForm"
+        android:src="@drawable/ic_menu_save" />
 
 </RelativeLayout>

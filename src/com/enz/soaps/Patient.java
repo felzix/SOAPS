@@ -1,4 +1,4 @@
-package com.enz.soaps.sqlite;
+package com.enz.soaps;
 
 public class Patient {
 	private long id;

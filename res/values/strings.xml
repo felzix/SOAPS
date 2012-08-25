@@ -8,5 +8,7 @@
     <string name="title_activity_new_form">New Form</string>
     <string name="search_patients">Search Patients</string>
     <string name="title_activity_view_patient">Patient</string>
+    <string name="entry_count_label">Entry Count</string>
+    <string name="save_form">Save Form</string>
 
 </resources>
