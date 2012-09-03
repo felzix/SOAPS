@@ -10,8 +10,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.text.TextUtils;
-import java.util.Arrays;
-import java.util.HashSet;
 
 public class SOAPSContentProvider extends ContentProvider {
 	private PatientsDatabaseHelper patientsDB;
@@ -229,18 +227,4 @@ public class SOAPSContentProvider extends ContentProvider {
         // TODO: Implement this to handle requests to update one or more rows.
         throw new UnsupportedOperationException("Not yet implemented");
     }
-    
-    private void checkColumns(String[] projection) {
-        String[] available = { PatientsTable.COLUMN_NAME,
-            PatientsTable.COLUMN_ENTRY_COUNT, PatientsTable.COLUMN_ID };
-        if (projection != null) {
-          HashSet<String> requestedColumns = new HashSet<String>(Arrays.asList(projection));
-          HashSet<String> availableColumns = new HashSet<String>(Arrays.asList(available));
-          // Check if all columns which are requested are available
-          if (!availableColumns.containsAll(requestedColumns)) {
-            throw new IllegalArgumentException("Unknown columns in projection");
-          }
-        }
-      }
-    
 }

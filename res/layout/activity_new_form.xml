@@ -10,8 +10,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="qw" >
+        android:inputType="textPersonName">
 
         <requestFocus />
     </EditText>
@@ -23,8 +22,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_patient_name"
         android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="er" />
+        android:inputType="textMultiLine"/>
 
     <EditText
         android:id="@+id/new_form_objective"
@@ -33,8 +31,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_subjective"
         android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="ty" />
+        android:inputType="textMultiLine"/>
 
     <EditText
         android:id="@+id/new_form_a"
@@ -43,8 +40,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_objective"
         android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="ui" />
+        android:inputType="textMultiLine"/>
 
     <EditText
         android:id="@+id/new_form_p"
@@ -53,8 +49,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_a"
         android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="op" />
+        android:inputType="textMultiLine"/>
 
     <EditText
         android:id="@+id/new_form_s"
@@ -63,8 +58,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_p"
         android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="as" />
+        android:inputType="textMultiLine"/>
 
     <ImageButton
         android:id="@+id/new_form_save"

@@ -23,11 +23,6 @@
         <activity
             android:name=".NewFormActivity"
             android:label="@string/title_activity_new_form" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <provider
@@ -40,11 +35,10 @@
         <activity
             android:name=".ViewPatientActivity"
             android:label="@string/title_activity_view_patient" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewFormActivity"
+            android:label="@string/title_activity_view_form" >
         </activity>
     </application>
 

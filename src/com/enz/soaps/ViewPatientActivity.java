@@ -57,6 +57,7 @@ public class ViewPatientActivity extends Activity {
         if (c != null) {
             if (c.moveToFirst()) {
                 String name = c.getString(c.getColumnIndex(PatientsTable.COLUMN_NAME));
+                patient.setName(name);
                 TextView tv_patient_name = (TextView)findViewById(R.id.view_patient_name);
                 tv_patient_name.setText(name);
             }
