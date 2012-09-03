@@ -106,7 +106,6 @@ public class NewFormActivity extends Activity {
     private Patient addPatient(String name) {
     	ContentValues values = new ContentValues();
     	values.put(PatientsTable.COLUMN_NAME, name);
-    	values.put(PatientsTable.COLUMN_ENTRY_COUNT, 1);
     	
     	Uri uri = Uri.parse(SOAPSContentProvider.CONTENT_URI + "/patients/");
     	uri = getContentResolver().insert(uri, values);
@@ -115,7 +114,6 @@ public class NewFormActivity extends Activity {
     	Patient patient = new Patient();
     	patient.setId(id);
     	patient.setName(name);
-    	patient.setEntryCount(1);
     	return patient;
     }
 }
