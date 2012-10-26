@@ -21,6 +21,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/button_new"
+        android:hint="@string/search_patients"
         android:inputType="text"
         android:singleLine="true"
         android:text="@string/search_patients" />

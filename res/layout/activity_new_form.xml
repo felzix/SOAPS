@@ -10,7 +10,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:ems="10"
-        android:inputType="textPersonName">
+        android:hint="@string/new_form_patient_name"
+        android:inputType="textPersonName" >
 
         <requestFocus />
     </EditText>
@@ -22,7 +23,9 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_patient_name"
         android:ems="10"
-        android:inputType="textMultiLine"/>
+        android:hint="@string/new_form_subjective"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
 
     <EditText
         android:id="@+id/new_form_objective"
@@ -31,7 +34,10 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_subjective"
         android:ems="10"
-        android:inputType="textMultiLine"/>
+        android:hint="@string/new_form_objective"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
+    
 
     <EditText
         android:id="@+id/new_form_a"
@@ -40,7 +46,9 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_objective"
         android:ems="10"
-        android:inputType="textMultiLine"/>
+        android:hint="@string/new_form_a"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
 
     <EditText
         android:id="@+id/new_form_p"
@@ -49,7 +57,9 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_a"
         android:ems="10"
-        android:inputType="textMultiLine"/>
+        android:hint="@string/new_form_p"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
 
     <EditText
         android:id="@+id/new_form_s"
@@ -58,7 +68,9 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/new_form_p"
         android:ems="10"
-        android:inputType="textMultiLine"/>
+        android:hint="@string/new_form_s"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
 
     <ImageButton
         android:id="@+id/new_form_save"

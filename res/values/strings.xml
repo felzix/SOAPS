@@ -10,5 +10,11 @@
     <string name="title_activity_view_patient">Patient</string>
     <string name="entry_count_label">Entry Count</string>
     <string name="save_form">Save Form</string>
+    <string name="new_form_patient_name">Patient Name | dropdown list --></string>
+    <string name="new_form_subjective">Subjective</string>
+    <string name="new_form_objective">Objective</string>
+    <string name="new_form_a">A</string>
+    <string name="new_form_p">P</string>
+    <string name="new_form_s">S</string>
 
 </resources>
