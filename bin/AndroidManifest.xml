@@ -24,7 +24,10 @@
             android:name=".NewFormActivity"
             android:label="@string/title_activity_new_form" >
         </activity>
-
+		<activity
+            android:name=".EditFormActivity"
+            android:label="@string/title_activity_edit_form" >
+        </activity>
         <provider
             android:name=".SOAPSContentProvider"
             android:authorities="com.enz.soaps.provider"

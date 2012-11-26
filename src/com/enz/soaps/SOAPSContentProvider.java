@@ -219,6 +219,38 @@ public class SOAPSContentProvider extends ContentProvider {
 	synchronized public int update(Uri uri, ContentValues values,
 			String selection, String[] selectionArgs) {
 		// TODO: Implement this to handle requests to update one or more rows.
-		throw new UnsupportedOperationException("Not yet implemented");
+		
+		int uriType = sURIMatcher.match(uri);
+
+		if (uriType == PATIENTS || uriType == PATIENT_ID) {
+			return updatePatients(uriType, uri, values, selection,
+					selectionArgs);
+		} else if (uriType == FORMS || uriType == FORM_ID) {
+			return updateForms(uriType, uri, values, selection,
+					selectionArgs);
+		} else {
+			throw new IllegalArgumentException("Unknown URI: " + uri);
+		}
+	}
+	
+	private Cursor updateForms(int uriType, Uri uri, ContentValues values,
+			String selection, String[] selectionArgs) {
+
+		SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
+		queryBuilder.setTables(FormsTable.TABLE_FORMS);
+
+		if (uriType == FORM_ID) {
+			// Adding the ID to the original query
+			queryBuilder.appendWhere(FormsTable.COLUMN_ID + "="
+					+ uri.getLastPathSegment());
+		}
+
+		SQLiteDatabase db = formsDB.getWritableDatabase();
+		Cursor cursor = queryBuilder.query(db, projection, selection,
+				selectionArgs, null, null, sortOrder);
+		// Make sure that potential listeners are getting notified
+		cursor.setNotificationUri(getContext().getContentResolver(), uri);
+
+		return cursor;
 	}
 }

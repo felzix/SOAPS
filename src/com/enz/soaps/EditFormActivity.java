@@ -17,7 +17,8 @@ import android.database.Cursor;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class NewFormActivity extends Activity {
+public class EditFormActivity extends Activity {
+	private long form_id;
 
 	private Patient spinner_patient;
 	private EditText patient_name_entry;
@@ -40,7 +41,16 @@ public class NewFormActivity extends Activity {
 		psomething = (EditText) findViewById(R.id.new_form_p);
 		ssomething = (EditText) findViewById(R.id.new_form_s);
 		
+		String patient_name = "";
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+			form_id = extras.getLong("com.enz.soaps.form.id");
+			patient_name = extras.getString("com.enz.soaps.patient.name");
+		} else {
+			// XXX something broke
+		}
 		populateExistingPatientSpinner();
+		spinner_patient.setName(patient_name);
 	}
 
 	@Override
@@ -119,7 +129,7 @@ public class NewFormActivity extends Activity {
 					       		   s_objective, s_asomething,
 					        	   s_psomething, s_ssomething);
 		/* Move to viewing the form */
-		Intent intent = new Intent(NewFormActivity.this, ViewFormActivity.class);
+		Intent intent = new Intent(EditFormActivity.this, ViewFormActivity.class);
 		intent.putExtra("com.enz.soaps.form.id", form_id);
 		intent.putExtra("com.enz.soaps.patient.name", s_patient_name);
 		startActivity(intent);
